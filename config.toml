@@ -1,0 +1,20 @@
+# Registration delay in seconds (задержка при регистрации в секундах)
+REGISTRATION_DELAY_SEC = [20, 30]
+
+# Shuffle accounts (перемешивать аккаунты, true - перемешивать, false - не перемешивать)
+SHUFFLE_ACCOUNTS = false
+
+# Retries count (количество попыток повтора после ошибки)
+RETRIES_COUNT = 3
+
+# Email service URL (URL сервиса email)
+EMAIL_SERVICE_URL = "http://localhost:8197"
+
+# Email service IMAP host (хост imap-сервиса)
+EMAIL_SERVICE_IMAP_HOST = "imap.firstmail.ltd"
+
+# Email service IMAP port (порт imap-сервиса)
+EMAIL_SERVICE_IMAP_PORT = 993
+
+# Показывать окно браузера (true - показывать, false - не показывать)
+SHOW_BROWSER = false
