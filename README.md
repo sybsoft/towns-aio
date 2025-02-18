@@ -1,4 +1,4 @@
-# Towns
+# Towns - https://t.me/sybilych
 
 ### Настройка
 - Заполняем `data/emails.txt`
