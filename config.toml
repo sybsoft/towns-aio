@@ -16,5 +16,11 @@ EMAIL_SERVICE_IMAP_HOST = "imap.firstmail.ltd"
 # Email service IMAP port (порт imap-сервиса)
 EMAIL_SERVICE_IMAP_PORT = 993
 
+# Email retries (количество попыток получения email кода)
+EMAIL_RETRIES = 2
+
+# Email sleep if not code found (задержка при отсутствии кода в email)
+EMAIL_SLEEP_IF_NOT_CODE_FOUND_SEC = 20
+
 # Показывать окно браузера (true - показывать, false - не показывать)
-SHOW_BROWSER = false
+SHOW_BROWSER = true

@@ -1,4 +1,7 @@
 import { consola } from 'consola'
+import { sleep } from '../utils.js'
+import config from '../config.js'
+
 
 export class EmailClient {
     constructor(host, imap_host, imap_port) {
@@ -7,7 +10,7 @@ export class EmailClient {
         this.imap_port = imap_port
     }
 
-    async getEmail(email_username, email_password, retries = 10) {
+    async getEmail(email_username, email_password, retries = config.EMAIL_RETRIES) {
         try {
             const emailCode = await fetch(`${this.host}/check_email`, {
                 method: 'POST',
@@ -36,6 +39,8 @@ export class EmailClient {
                 return false
             }
 
+            await sleep(config.EMAIL_SLEEP_IF_NOT_CODE_FOUND_SEC, config.EMAIL_SLEEP_IF_NOT_CODE_FOUND_SEC)
+
             return await this.getEmail(
                 email_username,
                 email_password,
@@ -46,6 +51,8 @@ export class EmailClient {
             if (retries <= 0) {
                 return false
             }
+
+            await sleep(config.EMAIL_SLEEP_IF_NOT_CODE_FOUND_SEC, config.EMAIL_SLEEP_IF_NOT_CODE_FOUND_SEC)
 
             return await this.getEmail(
                 email_username,

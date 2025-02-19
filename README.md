@@ -1,8 +1,8 @@
 # Towns
 
 ### Настройка
-- Заполняем `data/emails.txt`
-- Заполняем `data/proxies.txt`
+- Заполняем `data/emails.txt` в формате `username:password`
+- Заполняем `data/proxies.txt` в формате `username:password@ip:port`
 
 ### Установка зависимостей
 
